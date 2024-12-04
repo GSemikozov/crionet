@@ -1,6 +1,6 @@
 export interface Country {
   name: string
-  capital?: string
+  capital: string
   awsRegion?: string
   languages: {
     code: string
