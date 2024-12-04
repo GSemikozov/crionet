@@ -14,14 +14,13 @@ React + TypeScript + Vite template provides a minimal setup to get React working
 
 ## Further improvements
 
-1. if logic suppose to be more complicated with a lot of additional features - it is easy to move to FSD (feature sliced design)
+1. if logic suppose to be more complex with a lot of additional features - it is easy to switch to FSD (feature sliced design)
 2. then add router and pages (react-router-dom or similar)
-3. cover all important functionality by tests (jest or react-test-library)
-
-- api calls, both success and error flow
-- reducers
-- hooks
-- helpers
+3. cover all important functionality with unit tests (jest or react-test-library)
+  - api calls, both success and error flow
+  - reducers
+  - hooks
+  - helpers
 
 ## How To Run
 
