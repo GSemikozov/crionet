@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+# Crionet weather app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + TypeScript + Vite template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Current architecture principles
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. components for presentation without logic
+2. containers for connection to the data layer
+3. state management on RTK (redux toolkit with slices and react-query under the hood)
+4. ui from shadcn (redix + tailwind, pretty easy for prototyping)
+5. interaction with api - via graphql + apollo (api + libs folder)
 
-## Expanding the ESLint configuration
+## Further improvements
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. if logic suppose to be more complicated with a lot of additional features - it is easy to move to FSD (feature sliced design)
+2. then add router and pages (react-router-dom or similar)
+3. cover all important functionality by tests (jest or react-test-library)
 
-- Configure the top-level `parserOptions` property like this:
+- api calls, both success and error flow
+- reducers
+- hooks
+- helpers
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## How To Run
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Firstly, we use `geocoding-api.open-meteo.com` to get and display weather info
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. npm i
+2. npm run dev
