@@ -2,6 +2,8 @@
 
 React + TypeScript + Vite template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+`geocoding-api.open-meteo.com` is in use to get and display weather info
+
 ## Current architecture principles
 
 1. components for presentation without logic
@@ -22,8 +24,6 @@ React + TypeScript + Vite template provides a minimal setup to get React working
 - helpers
 
 ## How To Run
-
-Firstly, we use `geocoding-api.open-meteo.com` to get and display weather info
 
 1. npm i
 2. npm run dev
