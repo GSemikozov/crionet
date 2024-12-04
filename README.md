@@ -1,28 +1,42 @@
-# Crionet weather app
+# Crionet Weather App
 
-React + TypeScript + Vite template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project uses **React**, **TypeScript**, and **Vite** as the foundation, providing a minimal yet powerful setup with Hot Module Replacement (HMR) and ESLint rules.
 
-`geocoding-api.open-meteo.com` is in use to get and display weather info
+The app retrieves and displays weather information using the `geocoding-api.open-meteo.com`.  
+**Important:** The API requests are case-sensitive, so ensure proper formatting in search requests (for instance, try to search by `ge` and `Gr`, and see a difference).
 
-## Current architecture principles
+---
 
-1. components for presentation without logic
-2. containers for connection to the data layer
-3. state management on RTK (redux toolkit with slices and react-query under the hood)
-4. ui from shadcn (redix + tailwind, pretty easy for prototyping)
-5. interaction with api - via graphql + apollo (api + libs folder)
+## Current Architecture Principles
 
-## Further improvements
+1. **Components**: Focused on presentation without logic.
+2. **Containers**: Handle data-layer connections.
+3. **State Management**:  
+   - **RTK (Redux Toolkit)** with slices and **React Query** under the hood.
+4. **UI**: Uses **shadcn** (Radix + Tailwind) for rapid prototyping and clean design.
+5. **API Interaction**: Managed via **GraphQL** using **Apollo** (`api` and `libs` folders).
 
-1. if logic suppose to be more complex with a lot of additional features - it is easy to switch to FSD (feature sliced design)
-2. then add router and pages (react-router-dom or similar)
-3. cover all important functionality with unit tests (jest or react-test-library)
-  - api calls, both success and error flow
-  - reducers
-  - hooks
-  - helpers
+---
 
-## How To Run
+## Further Improvements
 
-1. npm i
-2. npm run dev
+1. If the app's logic grows more complex, consider transitioning to **FSD (Feature-Sliced Design)** for better scalability.
+2. Add routing for navigation:
+   - Use **React Router DOM** or similar routing libraries.
+3. Increase test coverage using **Jest** or **React Testing Library**:
+   - Test API calls (both success and error flows).
+   - Validate reducers.
+   - Test hooks and helpers.
+
+---
+
+## How to Run
+
+1. Install dependencies:
+```bash
+   npm i
+```
+2. Start the development server:
+```bash
+   npm run dev
+```
