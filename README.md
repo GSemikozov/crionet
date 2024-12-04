@@ -43,6 +43,6 @@ The app retrieves and displays weather information using the `geocoding-api.open
 
 ## Screenshots
 
-![App Default State](./assets/app1.png)
-![App Search State](./assets/app2.png)
-![App Details / Info State](./assets/app3.png)
+![App Default State](./app1.png)
+![App Search State](./app2.png)
+![App Details / Info State](./app3.png)
